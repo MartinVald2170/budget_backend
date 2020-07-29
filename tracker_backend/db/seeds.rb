@@ -1,9 +1,9 @@
 for i in 1..10 
-    Expense.create(
+    Saving.create(
         title: Faker::JapaneseMedia::OnePiece.character,
-        value: Faker::Types.rb_integer,
-        due: Faker::Date.between(from: "2020-08-01", to: "2021-01-01")
+        max: Faker::Number.number(digits: 5),
+        current: Faker::Number.number(digits: 3)
     )
 
-    puts "Created #{i} expenses"
+    puts "Created #{i} savings"
 end
